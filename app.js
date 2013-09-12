@@ -64,4 +64,4 @@ var playAudio = function () {
   });
 };
 
-//playAudio();
+playAudio();
