@@ -119,7 +119,7 @@ t.stream(
               from_screen_name: tweet.user.screen_name
             };
           
-            var text = clc.green.bgBlack(letweet.text); 
+            var text = clc.green(letweet.text); 
             track.forEach(function(item, i) {
               var re = new RegExp(item, 'gi');
               text = text.replace(re, clc.yellow(item));
