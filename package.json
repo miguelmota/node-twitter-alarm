@@ -13,6 +13,9 @@
   "dependencies": {
     "speaker": "0.0.10",
     "lame": "~1.0.3",
-    "oauth": "~0.9.10"
+    "oauth": "~0.9.10",
+    "say": "~0.5.0",
+    "cli-color": "~0.2.2",
+    "ntwitter": "~0.5.0"
   }
 }
