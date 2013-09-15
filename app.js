@@ -2,7 +2,6 @@ var https = require('https');
 var http = require('http');
 var fs = require('fs');
 var lame = require('lame');
-var lameDecoder = new lame.Decoder;
 var Speaker = require('speaker');
 var soundFile = 'media/sounds-917-communication-channel.mp3';
 var OAuth2 = require('oauth').OAuth2;
@@ -72,7 +71,7 @@ oauth2.getOAuthAccessToken(
 
 var playAudio = function () {
   fs.createReadStream(soundFile)
-    .pipe(lameDecoder)
+    .pipe(new lame.Decoder)
     .on('format', function(format) {
       this.pipe(new Speaker(format));
   });
