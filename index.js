@@ -8,12 +8,27 @@ var argv = require('minimist')(process.argv.slice(2));
 var twitter = require('ntwitter');
 var config = require('./config.json');
 
-function playAudio(filename) {
+function audio(filename) {
     fs.createReadStream(filename)
     .pipe(new lame.Decoder)
     .on('format', function(format) {
         this.pipe(new Speaker(format));
     });
+}
+
+function format(tweet) {
+    return {
+        date: moment(tweet.created_at),
+        text: tweet.text,
+        from: tweet.user.name,
+        from_screen_name: tweet.user.screen_name
+    };
+}
+
+function highlight(str, ary) {
+    return _.reduce(ary, function(acc, item, i) {
+        return acc.replace(new RegExp(item, 'gi'), clc.yellow(item));
+    }, str);
 }
 
 var opts = _.extend(config.defaults, !_.isEmpty(argv._) ? {track: argv._} : {});
@@ -28,22 +43,6 @@ var opts = _.extend(config.defaults, !_.isEmpty(argv._) ? {track: argv._} : {});
         stream.on('data', function(tweet) {
             if (/RT/.test(tweet.text)) return false;
 
-            function format(tweet) {
-                return {
-                    date: moment(tweet.created_at),
-                    text: tweet.text,
-                    from: tweet.user.name,
-                    from_screen_name: tweet.user.screen_name
-                };
-            }
-
-            function highlight(str, ary) {
-                return _.reduce(ary, function(acc, item, i) {
-                    var re = new RegExp(item, 'gi');
-                    return acc.replace(re, clc.yellow(item));
-                }, str);
-            }
-
             tweet = format(tweet);
             tweet.text = highlight(tweet.text, opts.track);
             tweet.toString = function() {
@@ -52,7 +51,7 @@ var opts = _.extend(config.defaults, !_.isEmpty(argv._) ? {track: argv._} : {});
 
             console.log(tweet.toString(), '\n');
 
-            _.has(config.notifications, 'filename') && playAudio(config.notifications.filename);
+            _.has(config.notifications, 'filename') && audio(config.notifications.filename);
         });
     }
 );
