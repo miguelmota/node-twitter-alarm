@@ -19,6 +19,8 @@ node index.js "burritos" "tacos"
 ```
 
 ```bash
+Listening for tweets matching: burritos, tacos
+
 > @_moogs : Need more burritos in my life Sat May 10 2014 18:16:37 GMT-0700
 ```
 
