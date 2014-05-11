@@ -1,21 +1,22 @@
 {
   "name": "twitter-alarm",
-  "version": "0.0.0",
-  "description": "ERROR: No README.md file found!",
-  "main": "app.js",
+  "version": "0.0.1",
+  "description": "Simple Twitter alarm",
+  "main": "index.js",
   "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "",
   "author": "",
-  "license": "BSD",
+  "license": "MIT",
   "dependencies": {
     "speaker": "0.0.10",
     "lame": "~1.0.3",
-    "oauth": "~0.9.10",
-    "say": "~0.5.0",
     "cli-color": "~0.2.2",
-    "ntwitter": "~0.5.0"
+    "ntwitter": "~0.5.0",
+    "lodash": "~2.4.1",
+    "minimist": "0.0.9",
+    "moment": "~2.6.0"
   }
 }

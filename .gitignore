@@ -1,9 +1,9 @@
 //this will affect all the git repos
-git config --global core.excludesfile ~/.gitignore 
- 
+git config --global core.excludesfile ~/.gitignore
+
 //update files since .ignore won't if already tracked
 git rm --cached <file>
- 
+
 # Compiled source #
 ###################
 *.com
@@ -12,7 +12,7 @@ git rm --cached <file>
 *.exe
 *.o
 *.so
- 
+
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source
@@ -25,13 +25,13 @@ git rm --cached <file>
 *.rar
 *.tar
 *.zip
- 
+
 # Logs and databases #
 ######################
 *.log
 *.sql
 *.sqlite
- 
+
 # OS generated files #
 ######################
 .DS_Store
@@ -48,7 +48,7 @@ Thumbs.db
 .tmproj
 *.esproj
 nbproject
- 
+
 # Numerous always-ignore extensions #
 #####################################
 *.diff
@@ -61,21 +61,21 @@ nbproject
 *.vi
 *~
 *.sass-cache
- 
+
 # Dreamweaver added files #
 ###########################
 _notes
 dwsync.xml
- 
+
 # Komodo #
 ###########################
 *.komodoproject
 .komodotools
- 
+
 # Node Module #
 #####################
 node_modules
- 
+
 # Folders to ignore #
 #####################
 .hg
@@ -87,3 +87,7 @@ publish
 .graphics
 _test
 _archive
+
+# Config files
+##############
+config.json
