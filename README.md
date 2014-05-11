@@ -1,6 +1,6 @@
 # Twitter Alarm
 
-Using the [ntwitter](https://github.com/AvianFlu/ntwitter) streaming twitter client to listen for tweets matching keywords and play a notification sound.
+Using the [ntwitter](https://github.com/AvianFlu/ntwitter) streaming twitter client to listen for tweets matching keywords and play a notification sound when it comes in.
 
 ## Install
 
