@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx/1.1.19
-Date: Thu, 28 Aug 2014 15:40:16 GMT
-Content-Type: text/html
-Content-Length: 3
-Last-Modified: Tue, 26 Aug 2014 22:24:55 GMT
-Connection: keep-alive
-Accept-Ranges: bytes
-
