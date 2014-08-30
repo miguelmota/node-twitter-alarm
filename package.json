@@ -11,12 +11,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "speaker": "0.0.10",
-    "lame": "~1.0.3",
     "cli-color": "~0.2.2",
-    "ntwitter": "~0.5.0",
+    "lame": "~1.0.3",
     "lodash": "~2.4.1",
     "minimist": "0.0.9",
-    "moment": "~2.6.0"
+    "moment": "~2.6.0",
+    "ntwitter": "^0.5.0",
+    "speaker": "0.0.10"
   }
 }

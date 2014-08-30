@@ -18,7 +18,7 @@ function audio(filename) {
 
 function format(tweet) {
     return {
-        date: moment(tweet.created_at),
+        date: moment(Date.parse(tweet.created_at)),
         text: tweet.text,
         from: tweet.user.name,
         from_screen_name: tweet.user.screen_name
