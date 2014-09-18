@@ -18,5 +18,9 @@
     "moment": "~2.6.0",
     "ntwitter": "^0.5.0",
     "speaker": "0.0.10"
-  }
+  },
+  "bin": {
+    "twitter-alarm": "bin/index.js"
+  },
+  "preferGlobal": "false"
 }
