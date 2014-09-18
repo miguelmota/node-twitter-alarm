@@ -1,14 +1,16 @@
 {
   "name": "twitter-alarm",
   "version": "0.0.1",
-  "description": "Simple Twitter alarm",
+  "description": "Twitter alarm",
   "main": "index.js",
-  "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
-  "author": "",
+  "repository": "https://github.com/miguelmota/node-twitter-alarm",
+  "author": "Miguel Mota <hello@miguelmota.com> (http://www.miguelmota.com/)",
+  "keywords": [
+    "dropbox"
+  ],
   "license": "MIT",
   "dependencies": {
     "cli-color": "~0.2.2",
