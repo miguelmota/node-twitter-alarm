@@ -32,6 +32,20 @@ On Debian/Ubuntu, the ALSA backend is selected by default, so be sure to have th
 sudo apt-get install libasound2-dev
 ```
 
+## Global install
+
+```bash
+npm install twitter-alarm -g
+```
+
+```bash
+vim /usr/local/lib/node_modules/twitter-alarm/config.json
+```
+
+```bash
+twitter-alarm burritos
+```
+
 # License
 
 Released under the MIT License.
