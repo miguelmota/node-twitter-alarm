@@ -43,7 +43,7 @@ vim /usr/local/lib/node_modules/twitter-alarm/config.json
 ```
 
 ```bash
-twitter-alarm burritos
+twitter-alarm "burritos" "tacos"
 ```
 
 # License
