@@ -8,13 +8,19 @@ var moment = require('moment');
 var argv = require('minimist')(process.argv.slice(2));
 var twitter = require('twitter');
 
-var configFile = './config.json';
-var globalConfigFile = path.resolve('~/.twitter-alarm/' + configFile);
-var config;
+function getUserHome() {
+  return process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
+}
+
+var config = {};
+var configFile = path.resolve(__dirname + '/config.json');
+var globalConfigFile = path.resolve(getUserHome() + '/.twitter-alarm/config.json');
 
 fs.exists(globalConfigFile, function(exists) {
   if (exists) {
-    configFile = globalConfigFile;
+    config = require(globalConfigFile);
+  } else {
+    config = require(configFile);
   }
   init();
 });
@@ -34,7 +40,6 @@ function highlight(str, ary) {
 }
 
 function init() {
-  config = require(configFile);
   var opts = _.extend(config.defaults, !_.isEmpty(argv._) ? {track: argv._} : {});
 
   var playNotfication = _.throttle(function() {

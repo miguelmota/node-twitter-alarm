@@ -1,6 +1,6 @@
 {
   "name": "twitter-alarm",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Twitter alarm",
   "main": "index.js",
   "scripts": {
