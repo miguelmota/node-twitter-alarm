@@ -39,7 +39,7 @@ npm install twitter-alarm -g
 ```
 
 ```bash
-vim /usr/local/lib/node_modules/twitter-alarm/config.json
+cp /usr/local/lib/node_modules/twitter-alarm/config.json ~/.twitter-alarm/config.json
 ```
 
 ```bash

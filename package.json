@@ -1,6 +1,6 @@
 {
   "name": "twitter-alarm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Twitter alarm",
   "main": "index.js",
   "scripts": {
@@ -18,8 +18,8 @@
     "lodash": "~2.4.1",
     "minimist": "0.0.9",
     "moment": "~2.6.0",
-    "ntwitter": "^0.5.0",
-    "speaker": "0.0.10"
+    "speaker": "0.0.10",
+    "twitter": "^0.2.13"
   },
   "bin": {
     "twitter-alarm": "bin/index.js"
